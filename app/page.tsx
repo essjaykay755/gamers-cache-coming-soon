@@ -9,7 +9,7 @@ import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import {
   Cpu,
-  CpuIcon as Gpu,
+  CpuIcon,
   HardDrive,
   MemoryStickIcon as Memory,
   MonitorPlay,
@@ -158,7 +158,19 @@ export default function Home() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
               {[
-                { icon: <Gpu className="h-8 w-8" />, name: "Graphics Cards" },
+                { 
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8">
+                      <rect x="2" y="5" width="20" height="14" rx="2" />
+                      <path d="M2 10h20" />
+                      <path d="M6 15h4" />
+                      <path d="M14 15h4" />
+                      <path d="M6 18h4" />
+                      <path d="M14 18h4" />
+                    </svg>
+                  ), 
+                  name: "Graphics Cards" 
+                },
                 { icon: <Cpu className="h-8 w-8" />, name: "Processors" },
                 { icon: <Memory className="h-8 w-8" />, name: "Memory" },
                 { icon: <HardDrive className="h-8 w-8" />, name: "Storage" },
