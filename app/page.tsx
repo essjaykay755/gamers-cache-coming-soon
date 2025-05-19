@@ -4,7 +4,7 @@ import type React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { ModeToggle } from "@/components/mode-toggle"
+import { ModeToggle } from "@/components/new-components/mode-toggle"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import {
@@ -33,7 +33,7 @@ export default function Home() {
   useEffect(() => {
     setMounted(true)
 
-    const launchDate = new Date("May 1, 2025 00:00:00").getTime()
+    const launchDate = new Date("June 1, 2025 00:00:00").getTime()
 
     const timer = setInterval(() => {
       const now = new Date().getTime()
@@ -115,7 +115,7 @@ export default function Home() {
 
           {/* Countdown */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent dark:from-red-600/20 blur-xl -z-10 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#ba3838]/20 to-transparent dark:from-[#ba3838]/20 blur-xl -z-10 rounded-3xl"></div>
             <div className="bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-xl">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center dark:text-white text-gray-800">
                 Launching In
@@ -192,7 +192,7 @@ export default function Home() {
 
           {/* Newsletter */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-l from-red-500/20 to-transparent dark:from-red-600/20 blur-xl -z-10 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-l from-[#ba3838]/20 to-transparent dark:from-[#ba3838]/20 blur-xl -z-10 rounded-3xl"></div>
             <div className="bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-xl">
               <div className="max-w-2xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center dark:text-white text-gray-800">
